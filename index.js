@@ -16,7 +16,7 @@ fLoad = require("./functions/load"),
 utils = require("./functions/utils");
 
 /**
- * This function check if a backup exists and returns its informations 
+ * This function check if a backup exists and returns its informations
  * @param {string} backupID
  * @returns The backup informations
  */
@@ -54,6 +54,7 @@ module.exports = {
                 resolve({
                     ID: backupID,
                     guildID: backupInformations.guildID,
+                    server: backupInformations.name,
                     createdTimestamp: backupInformations.createdTimestamp,
                     size: `${(size/1024/1024).toFixed(2)}MB`,
                     data: backupInformations
